@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nostu — Privacy Policy</title>
+<meta name="description" content="How Nostu for iOS handles your data. Most of what Nostu knows never leaves your iPhone.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Nostu — Privacy Policy">
+<meta property="og:description" content="How Nostu for iOS handles your data.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --canvas: #ffffff;
+    --surface: #f2f2f7;
+    --surface-2: #ffffff;
+    --text: #000000;
+    --text-2: #3c3c4399;
+    --text-3: #3c3c434d;
+    --rule: #3c3c4326;
+    --accent: #000000;
+    --measure: 34rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas: #000000;
+      --surface: #1c1c1e;
+      --surface-2: #1c1c1e;
+      --text: #ffffff;
+      --text-2: #ebebf599;
+      --text-3: #ebebf54d;
+      --rule: #54545899;
+      --accent: #ffffff;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--text);
+    font: 400 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 2.5rem 1.25rem 4rem; }
+  }
+
+  /* ── Masthead ─────────────────────────────────────────── */
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin: 0 0 0.75rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.022em;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+
+  .stamp {
+    font-size: 0.8125rem;
+    color: var(--text-2);
+    margin: 0 0 2.5rem;
+    line-height: 1.5;
+  }
+  .stamp span { white-space: nowrap; }
+  .stamp span + span::before {
+    content: "·";
+    margin: 0 0.5em;
+    color: var(--text-3);
+  }
+
+  /* ── Summary card ─────────────────────────────────────── */
+
+  .summary {
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 1.25rem 1.375rem;
+    margin: 0 0 3rem;
+  }
+  .summary p {
+    margin: 0 0 0.875rem;
+    font-size: 1rem;
+  }
+  .summary ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .summary li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+    font-size: 0.9375rem;
+    color: var(--text-2);
+  }
+  .summary li::before {
+    content: "";
+    position: absolute;
+    left: 0.1875rem;
+    top: 0.6875em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--text-3);
+  }
+
+  /* ── Contents ─────────────────────────────────────────── */
+
+  nav.toc {
+    margin: 0 0 3.5rem;
+    padding: 0 0 0 0;
+    border-top: 1px solid var(--rule);
+  }
+  nav.toc ol {
+    list-style: none;
+    counter-reset: toc;
+    margin: 0;
+    padding: 0;
+  }
+  nav.toc li { counter-increment: toc; }
+  nav.toc a {
+    display: flex;
+    gap: 0.875rem;
+    padding: 0.6875rem 0;
+    border-bottom: 1px solid var(--rule);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+  nav.toc a::before {
+    content: counter(toc);
+    color: var(--text-3);
+    font-variant-numeric: tabular-nums;
+    min-width: 1.25rem;
+  }
+  nav.toc a:hover { color: var(--text-2); }
+
+  /* ── Body ─────────────────────────────────────────────── */
+
+  section { margin: 0 0 3rem; scroll-margin-top: 1.5rem; }
+
+  h2 {
+    font-size: 1.375rem;
+    line-height: 1.2;
+    letter-spacing: -0.014em;
+    font-weight: 700;
+    margin: 0 0 0.875rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.004em;
+    font-weight: 600;
+    margin: 1.75rem 0 0.5rem;
+  }
+
+  p { margin: 0 0 1rem; }
+
+  ul.plain {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+  }
+  ul.plain li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  ul.plain li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--text-3);
+  }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--text); text-underline-offset: 0.2em; text-decoration-color: var(--text-3); }
+  a:hover { text-decoration-color: var(--text); }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 0.875em;
+    background: var(--surface);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+
+  /* ── Table ────────────────────────────────────────────── */
+
+  .table-scroll { overflow-x: auto; margin: 0 0 1rem; -webkit-overflow-scrolling: touch; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 22rem;
+    font-size: 0.9375rem;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.6875rem 0.875rem 0.6875rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  th {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    border-bottom-color: var(--text-3);
+  }
+  td:last-child, th:last-child { padding-right: 0; color: var(--text-2); }
+
+  /* ── Callout ──────────────────────────────────────────── */
+
+  .note {
+    border-left: 2px solid var(--rule);
+    padding: 0.125rem 0 0.125rem 1rem;
+    margin: 0 0 1rem;
+    color: var(--text-2);
+    font-size: 0.9375rem;
+  }
+  .note p:last-child { margin-bottom: 0; }
+
+  /* ── Footer ───────────────────────────────────────────── */
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.8125rem;
+    color: var(--text-3);
+    line-height: 1.6;
+  }
+  footer a { color: var(--text-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Nostu for iOS</p>
+  <h1>Privacy&nbsp;Policy</h1>
+  <p class="stamp">
+    <span>Version 1.2</span><span>Effective 10 September 2026</span>
+  </p>
+
+  <div class="summary">
+    <p>Nostu gives real places a shared timeline. It is built so that most of what it knows never leaves your iPhone.</p>
+    <ul>
+      <li>Nostu runs no servers. There is no Nostu database, anywhere, holding your data.</li>
+      <li>What you publish for everyone goes to Apple's CloudKit, in Nostu's iCloud container — not to a machine we own.</li>
+      <li>Nothing you keep private ever leaves your device.</li>
+      <li>There are no third-party SDKs in Nostu: no analytics, no advertising, no crash reporters, no trackers.</li>
+      <li>Nostu never sells or shares personal information, and never builds an advertising profile of you.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#who">Who is responsible</a></li>
+      <li><a href="#collect">What Nostu collects, and where it lives</a></li>
+      <li><a href="#published">What becomes public when you publish</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#photos">Photos, audio and metadata</a></li>
+      <li><a href="#moderation">On-device safety checks</a></li>
+      <li><a href="#faces">Faces</a></li>
+      <li><a href="#reports">Reports and blocking</a></li>
+      <li><a href="#analytics">Product analytics</a></li>
+      <li><a href="#account">Your account</a></li>
+      <li><a href="#contacts">Contacts and your profile picture</a></li>
+      <li><a href="#widget">The Home Screen widget</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#sharing">Sharing and diagnostics</a></li>
+      <li><a href="#never">What Nostu never does</a></li>
+      <li><a href="#rights">Your rights and controls</a></li>
+      <li><a href="#retention">Retention</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="who">
+    <h2>Who is responsible</h2>
+    <p>Nostu is developed and published by <strong>Visakh V Nair</strong>, an individual developer, who is the data controller for the purposes of the GDPR and equivalent laws. Nostu is not yet operated by an incorporated company; if that changes, this page will be updated and the version number raised before the change takes effect.</p>
+    <p>This policy covers the Nostu iOS app and its Home Screen widget. It does not cover Apple's own services — iCloud, Sign in with Apple, Apple Maps and the App Store are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+  </section>
+
+  <section id="collect">
+    <h2>What Nostu collects, and where it lives</h2>
+    <p>Everything Nostu holds is in one of three places. The complete, itemised list is inside the app at <strong>Settings › Privacy Center › Data Dashboard</strong> — and it is the same list the app's own deletion code walks, so the two cannot drift apart.</p>
+
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Where</th><th>What</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>On your&nbsp;iPhone</strong></td>
+          <td>Your memories and the places they belong to; private and contributors-only memories in full; your profile and settings; private voice notes; achievements; safety counters; the usage record described below.</td>
+        </tr>
+        <tr>
+          <td><strong>In&nbsp;iCloud</strong></td>
+          <td>Only memories you publish <em>for everyone</em>, and the places they attach to. Stored through Apple's CloudKit in the container <code>iCloud.com.nostu.app</code>. Your block list is stored separately, in your own private iCloud database.</td>
+        </tr>
+        <tr>
+          <td><strong>Never&nbsp;stored</strong></td>
+          <td>Your movements; text read out of your photos during safety checks; face counts; anything Nostu computes in the moment and discards.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>There is no fourth place. Nostu operates no server, no API and no database of its own, and the app contains no code that sends your data to any third party.</p>
+  </section>
+
+  <section id="published">
+    <h2>What becomes public when you publish</h2>
+    <p>A memory is uploaded only when you have set it to <strong>Everyone</strong> and it has passed the on-device safety checks. Anything you keep private, or restrict, stays on your device and is never uploaded.</p>
+    <p>When you do publish, this is what travels with it, and it is visible to other people using Nostu:</p>
+    <ul class="plain">
+      <li>The photograph, or the voice recording, and its duration.</li>
+      <li>Your title, your note, and the mood you chose.</li>
+      <li><strong>Your first name</strong>, shown as the author. This is the one piece of your identity that becomes public. You can change it in the app, and it is the only name Nostu ever publishes — never your full name, never your email address, never your Apple Account.</li>
+      <li>When it was captured, which way you were facing, and the altitude.</li>
+      <li>The tags Nostu's on-device image recognition produced for the photo.</li>
+      <li>The place: its name, its city and country, and its coordinates — because a shared timeline is meaningless without the place it belongs to.</li>
+    </ul>
+    <p>Comments you leave on public timelines carry your first name and your words, and are visible in the same way.</p>
+    <div class="note">
+      <p>A published memory is a chapter in a place's story. You can delete your own chapters at any time, and Nostu removes them from iCloud. Other people's chapters in the same timeline are theirs, and stay.</p>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>Location</h2>
+    <p>Nostu asks for location <em>while using the app</em> only. It is used for exactly two things:</p>
+    <ul class="plain">
+      <li>At the moment you capture a memory, to work out which real place you are standing at.</li>
+      <li>While the map is open, to show what is near you.</li>
+    </ul>
+    <p>Nostu may also ask for temporary <em>precise</em> location at capture time, so that it can tell one building from the one next door and your memory joins the right timeline rather than the shop next door's.</p>
+    <p><strong>Nostu keeps no history of your movements.</strong> There is no background location, no significant-location monitoring, no geofencing, and no record of where you travelled between places. Your position is used in the moment and discarded. Coordinates persist only as the coordinates <em>of a place</em>, and only when you publish a chapter to it.</p>
+  </section>
+
+  <section id="photos">
+    <h2>Photos, audio and metadata</h2>
+    <p>Every photograph — whether you take it in Nostu or choose it from your library — is decoded, resized and re-encoded before Nostu stores it. A practical consequence of that: the JPEG Nostu keeps and publishes is built from pixels alone, so <strong>the original EXIF metadata does not survive it</strong>. No embedded GPS coordinates, no camera serial number, no lens or exposure data travels with your photo.</p>
+    <p>If you turn it on, Nostu can also save a copy of a shot you took into your own Photos library. That copy is yours, in your library, and Nostu does not read the rest of it.</p>
+    <p>Private voice notes you record for yourself are audio files on your iPhone. They are excluded from device backups, never uploaded, never analysed, and never audible to anyone else. Deleting the memory deletes the recording.</p>
+  </section>
+
+  <section id="moderation">
+    <h2>On-device safety checks</h2>
+    <p>Before a photograph can be published to a shared timeline, Nostu checks it. Every one of those checks runs on your iPhone, using Apple's own frameworks. <strong>Nothing is uploaded for analysis, and no image is ever sent anywhere to be reviewed.</strong></p>
+    <p>The checks look for adult content, violence, child-safety concerns, screenshots, advertising, duplicates, and photographs that do not appear to match the place you are at. Nostu reads text visible in the photo in order to spot advertising and screenshots — that text is used for the decision and thrown away. It is never stored, never indexed, never uploaded.</p>
+    <p>What is kept is the result: whether the photo passed. It is stored with the memory on your device, so a chapter's right to be public is a recorded fact rather than something re-decided later.</p>
+    <p>Nostu also keeps a private score on your device, used only to decide which photograph represents a place on the map. It is never shown to you or anyone else, it is never uploaded, and it can never hide or delete a memory.</p>
+    <p>If a check cannot run, your memory is still saved to your device — it simply is not published until it can be reviewed.</p>
+  </section>
+
+  <section id="faces">
+    <h2>Faces</h2>
+    <p>Nostu counts faces in a photograph to warn you when it is mostly a portrait, or when a crowd is visible — because the people in your photograph did not agree to anything.</p>
+    <p>It detects rectangles, and only rectangles. <strong>There is no face recognition, no identification, and no face template of any kind is ever created, stored or transmitted.</strong> The count exists for a fraction of a second and is discarded.</p>
+  </section>
+
+  <section id="reports">
+    <h2>Reports and blocking</h2>
+    <h3>When you report something</h3>
+    <p>A report is delivered to a write-only drop box in Nostu's iCloud container. It carries the category you chose and an identifier for the content — <strong>never the image itself, never your words, and never your location</strong>. CloudKit stamps the report with an account identifier assigned by Apple, which is how reports are grouped and rate-limited.</p>
+    <p>That record type grants no read access to anyone. The person you reported cannot fetch it, and no user can enumerate reports. Only Nostu's operator can read reports, and only for moderation.</p>
+    <h3>When you block someone</h3>
+    <p>Your block list is stored in <strong>your own private iCloud database</strong>, so it follows you to your other devices. It is scoped to your Apple Account: Nostu cannot read it, no other user can read it, and it is never disclosed to the person you blocked.</p>
+    <h3>Safety counters</h3>
+    <p>Nostu keeps a few private counters on your device: how many chapters you have published, how many uploads were refused, timers that slow runaway posting, and a record of any warning or restriction on your account so that you can see and appeal it. None of it syncs, none of it is shown to anyone, and its only effect is a very small adjustment to how carefully your next upload is checked. Negative marks fade automatically over about six weeks.</p>
+  </section>
+
+  <section id="analytics">
+    <h2>Product analytics</h2>
+    <p>Nostu keeps a short record of things that happen while you use it — the app starting, a timeline opened, a memory read, a memory published, a share. It is how the developer can tell whether the app works.</p>
+    <ul class="plain">
+      <li><strong>It stays on your iPhone.</strong> Nostu has no analytics endpoint configured and no server to send it to. It has never left a device.</li>
+      <li>It notes that something happened and when — never what was in it. No photographs, no captions, no notes, no titles, no names.</li>
+      <li>It contains no coordinates and no record of where you travelled. A place appears only as a one-way fingerprint that cannot be turned back into its name or its position. City and country are kept in plain form.</li>
+      <li>It is attached to a random identifier for this installation, deliberately unrelated to your Apple Account.</li>
+      <li>Erasing your data erases it, identifier included.</li>
+    </ul>
+    <p>If this ever changes — if a destination for this record is ever configured — this policy will say so, with a raised version number, before it happens.</p>
+  </section>
+
+  <section id="account">
+    <h2>Your account</h2>
+    <p>Nostu uses <strong>Sign in with Apple</strong>. There are no Nostu passwords, and Nostu never sees your Apple Account password.</p>
+    <p>Apple gives Nostu a private identifier unique to this app. It is stored in your iPhone's Keychain and is what makes your account restore itself if you reinstall. Apple may also give Nostu your name and email address on the first sign-in — including a private relay address, if you choose to hide your email.</p>
+    <p><strong>Your email address is stored only on your device</strong>, where it is shown back to you in Settings. It is never uploaded, never published and never used to contact you. Your first name is used as your author name, and only your first name is ever published.</p>
+  </section>
+
+  <section id="contacts">
+    <h2>Contacts and your profile picture</h2>
+    <p>You may set your profile picture by choosing a card from Apple's system contact picker — the simplest way to use a Memoji or photo you already have.</p>
+    <p><strong>Nostu never asks for Contacts permission and never sees your address book.</strong> Apple's picker runs outside the app; Nostu receives only the single card you point at, and only its picture. No name, phone number, email address, birthday or relationship is read or kept. The picture stays on your device.</p>
+  </section>
+
+  <section id="widget">
+    <h2>The Home Screen widget</h2>
+    <p>Nostu's widget shows memories you already have. To do that, the app writes a small snapshot — a few lines of text and thumbnail images — into a private container shared between the app and the widget on your device.</p>
+    <p>That container is on your iPhone. Nothing in it is uploaded, and nothing in it is readable by any other app.</p>
+  </section>
+
+  <section id="notifications">
+    <h2>Notifications</h2>
+    <p>If you allow notifications, Nostu registers with Apple's Push Notification service so that iCloud can tell you when a timeline you contributed to has changed. Apple's push token is handled by Apple and CloudKit. <strong>Nostu operates no push server and holds no device tokens</strong>, because there is nowhere for it to hold them.</p>
+  </section>
+
+  <section id="sharing">
+    <h2>Sharing and diagnostics</h2>
+    <p>When you tap Share, Nostu renders a card and hands it to the iOS share sheet, or to Instagram Stories if you choose that. What happens after that is governed by whichever app or service you send it to — not by this policy.</p>
+    <p>Nostu can also generate a diagnostic report you can send to the developer if something goes wrong. It describes the app's state, not your content, and it passes through a redaction step before it is written. <strong>It is only ever created and sent by you, deliberately</strong> — it is never generated in the background or transmitted automatically.</p>
+  </section>
+
+  <section id="never">
+    <h2>What Nostu never does</h2>
+    <ul class="plain">
+      <li>Nostu contains <strong>no third-party SDKs at all</strong>. No analytics library, no advertising library, no crash reporter, no attribution kit, no tracking pixel. Every framework it uses is Apple's own.</li>
+      <li>Nostu does not track you across apps or websites, and does not use the Advertising Identifier.</li>
+      <li>Nostu does not sell, rent or share your personal information with anyone.</li>
+      <li>Nostu does not read your contacts, your browsing, your calendar, your health data or what else is on your device.</li>
+      <li>Nostu does not use your content to train machine-learning models.</li>
+      <li>Nostu shows no advertising.</li>
+    </ul>
+  </section>
+
+  <section id="rights">
+    <h2>Your rights and controls</h2>
+    <p>Wherever you live, you can do all of this from inside the app, immediately, without asking anyone:</p>
+    <ul class="plain">
+      <li><strong>See everything stored</strong> — Settings › Privacy Center › Data Dashboard.</li>
+      <li><strong>Export a copy</strong> — Privacy Center › Download My Data.</li>
+      <li><strong>Clear individual categories</strong> — Privacy Center › Clear Local Data.</li>
+      <li><strong>Delete your account and everything with it</strong> — Privacy Center › Delete Account. This erases your memories, your profile, your Sign in with Apple identifier, your safety data and your usage record from the device, and removes the chapters you published from iCloud.</li>
+    </ul>
+    <p>Under the GDPR and comparable laws you also have the right to rectification, restriction, objection, and to lodge a complaint with your supervisory authority. Nostu is built so that access, portability and erasure need no request at all — but if you want any of these handled by a person, or need something the app cannot do, write to the address below and it will be actioned within one month.</p>
+    <p>Nostu has no legal basis to keep anything you have asked it to delete, and there is no backup system that would resurrect it.</p>
+  </section>
+
+  <section id="retention">
+    <h2>Retention</h2>
+    <ul class="plain">
+      <li>Memories are kept until you delete them.</li>
+      <li>Rate-limit timers expire within a day.</li>
+      <li>Reports you have filed are kept for up to six months.</li>
+      <li>Account warnings, restrictions and appeals are kept for a year, so you can see and contest them.</li>
+      <li>When you delete a published memory, Nostu keeps only its identifier for a month, so that the copy in iCloud is removed and cannot reappear. That note holds no photograph, no words and no place.</li>
+    </ul>
+    <p>Nothing is kept longer than it is useful.</p>
+  </section>
+
+  <section id="children">
+    <h2>Children</h2>
+    <p>Nostu is not designed for children and is not in the App Store's Kids Category. It shows photographs of real public places, published by strangers. Nostu does not knowingly collect personal information from children.</p>
+    <p>If you believe a child is using Nostu, or that content on Nostu puts a child at risk, write to the address below and it will be acted on immediately.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes in substance, the version number at the top of this page changes with it, and you will be told inside the app before the new version applies. Typo fixes do not raise the version.</p>
+    <p>A copy of this policy also ships inside the app, at Settings › Privacy Center, so you can read it without a network connection.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Privacy questions, data-protection requests, safety concerns, copyright claims and legal process all go to one address, which is read by a person:</p>
+    <p style="font-size:1.0625rem"><a href="mailto:visakhvnair321@gmail.com">visakhvnair321@gmail.com</a></p>
+    <p>Formal data-protection requests are answered within one month, as the GDPR requires. Safety reports involving a child or an immediate risk of harm are acted on as soon as they are seen.</p>
+  </section>
+
+  <footer>
+    <p>Nostu for iOS — Privacy Policy, version 1.2, effective 10 September 2026. Developed and published by Visakh V Nair.</p>
+    <p>Apple, iPhone, iCloud, CloudKit, Sign in with Apple and Apple Maps are trademarks of Apple Inc. Nostu is not affiliated with or endorsed by Apple Inc.</p>
+  </footer>
+
+</div>
+</body>
+</html>
